@@ -1,10 +1,10 @@
 # importing modules
-import re
-from unittest import result           # regular expressions module
+import re       # regular expressions module
 
 # string we want to match our expressions on
 target_string = "Educloud phone number is: 06-123-456"
 
+#Some solutions to the assingment
 my_regex0 = "06-123-456" # this is the lazymode solution
 result0 = re.findall(my_regex0,target_string)
 my_regex1 = "\d+\D?\d+\D?\d+" #matching against 1 or more digits in a row, followed by zero or one non-digit. And repeat this.
@@ -15,7 +15,7 @@ my_regex3 = "\d{2}[-]?\d{3}[-]?\d{3}" # same as 2, but with ranges for the dashe
 result3 = re.findall(my_regex3,target_string)
 my_regex4 = "[0-9]{2}[-]?[0-9]{3}[-]?[0-9]{3}" # using ranging, and quantifiers to filter out the phone number, same principle as my_regex2/3
 result4 =re.findall(my_regex4,target_string)
-my_regex5 = "\d+.\d+.\d+" #suing the 
+my_regex5 = "\d+.\d+.\d+" #matching digits, using wildcards for the dashes
 result5 =re.findall(my_regex5,target_string)
 
 print(result0)

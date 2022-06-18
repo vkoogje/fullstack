@@ -1,9 +1,10 @@
 # importing modules
-import re           # regular expressions module
+import re       # regular expressions module
 
 # string we want to match our expressions on
 target_string = "Educloud phone number is: 06-123-456 and 06.123.456"
 
+#Some solutions to the assingment
 my_regex1 = "\d+\D?\d+\D?\d+" #matching against 1 or more digits in a row, followed by zero or one non-digit. And repeat this.
 result1 = re.findall(my_regex1,target_string)
 my_regex2 = "\d{2}.-?\d{3}.-?\d{3}" # matching against 2 digits and zero or more non-digits. Then the same but with 3 digits and repeat
