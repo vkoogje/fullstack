@@ -15,8 +15,9 @@ my_regex3 = "\d{2}[-]?\d{3}[-]?\d{3}" # same as 2, but with ranges for the dashe
 result3 = re.findall(my_regex3,target_string)
 my_regex4 = "[0-9]{2}[-]?[0-9]{3}[-]?[0-9]{3}" # using ranging, and quantifiers to filter out the phone number, same principle as my_regex2/3
 result4 =re.findall(my_regex4,target_string)
-my_regex5 = "\d+.\d+.\d+" #matching digits, using wildcards for the dashes
-result5 =re.findall(my_regex5,target_string)
+my_regex5 = "\d+.\d+.\d+" # matching digits, using wildcards for the dashes
+my_regex5_compiled = re.compile(my_regex5) # compiling the pattern
+result5 =my_regex5_compiled.findall(target_string) # use the pattern on our string
 
 print(result0)
 print(result1)

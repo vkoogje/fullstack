@@ -15,9 +15,14 @@ my_regex4 = "[0-9]{2}[.-]?[0-9]{3}[.-]?[0-9]{3}" # using ranging, and quantifier
 result4 = re.findall(my_regex4,target_string)
 my_regex5 = "\d+.\d+.\d+"
 result5 =re.findall(my_regex5,target_string)
-# print(result0)
+my_regex6 = "\d+.\d+.\d+"
+my_regex6_compiled = re.compile(my_regex6)
+result6 = my_regex6_compiled.findall(target_string)
+
+
 print(result1)
 print(result2)
 print(result3)
 print(result4)
 print(result5)
+print(result6)

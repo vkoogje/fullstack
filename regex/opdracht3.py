@@ -10,7 +10,11 @@ result1 = re.findall(my_regex1,target_string)
 my_regex2 = "[a-z]+\.[a-z]+/?[a-z]+" #match all alphnum chars preceding a dot and optional has a "/", 
 result2 = re.findall(my_regex2,target_string)
 my_regex3 = "(?:\w+\.\w+)(?:\/?\w+)" # doing it the hard way - used non-capturing groups, 
-result3 = re.findall(my_regex1,target_string) 
+result3 = re.findall(my_regex3,target_string)
+my_regex4 = "(?:\w+\.\w+)(?:\/?\w+)" # doing it the hard way - used non-capturing groups, 
+result4 = re.findall(my_regex4,target_string)
+
 print(result1)
 print(result2)
 print(result3)
+print(result4)
